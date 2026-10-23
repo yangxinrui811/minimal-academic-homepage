@@ -574,6 +574,44 @@
         height: 190px;
       }
     }
+
+    /* ── v2 additions ── */
+    .chip-row { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 4px; }
+    .chip {
+      font-size:13px; padding:5px 13px; border-radius:999px;
+      background:var(--chip); color:var(--chip-text); font-weight:550; letter-spacing:.01em;
+    }
+    .stat-row { display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 2px; }
+    .stat-box {
+      flex:1; min-width:150px; background:var(--chip); border-radius:16px; padding:12px 16px; text-align:center;
+    }
+    .stat-num { font-size:22px; font-weight:700; letter-spacing:-.02em; }
+    .stat-cap { font-size:12.5px; color:var(--muted); }
+    .news-item { display:flex; gap:10px; margin-bottom:8px; font-size:14.5px; }
+    .news-date { color:var(--muted); white-space:nowrap; font-size:13px; padding-top:2px; }
+    .badge {
+      font-size:12px; font-weight:650; padding:3px 9px; border-radius:999px; margin-right:6px;
+      background:#e8f2ff; color:#0a5bb5;
+    }
+    .badge.first { background:#fff3e0; color:#b25e00; }
+    .fleet-flow { display:flex; align-items:stretch; gap:6px; flex-wrap:wrap; margin:16px 0 6px; }
+    .fleet-node {
+      flex:1; min-width:120px; background:var(--chip); border-radius:14px; padding:10px 12px;
+      font-size:13px; text-align:center; color:var(--subtle);
+    }
+    .fleet-node b { display:block; font-size:13.5px; color:var(--text); margin-bottom:3px; }
+    .fleet-arrow { align-self:center; color:var(--muted); font-size:16px; }
+    .soft-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; margin-top:14px; }
+    .soft-card { background:var(--chip); border-radius:16px; padding:14px 16px; }
+    .soft-card b { font-size:14.5px; }
+    .soft-card p { margin:6px 0 8px; font-size:13px; color:var(--muted); line-height:1.5; }
+    .soft-card a { font-size:12.5px; }
+    .cover-fallback {
+      width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+      font-weight:700; font-size:26px; letter-spacing:.06em; color:#fff;
+      background:linear-gradient(135deg,#0f2d5c,#1e6fd0);
+      border-radius:12px;
+    }
   </style>
 </head>
 
@@ -594,16 +632,28 @@
         <h1>Xinrui Yang <span style="font-size:0.5em;font-weight:400;color:var(--muted)">(杨欣瑞)</span></h1>
 
         <p class="identity">
-          Postdoctoral Researcher<br>
-          College of Chemistry, Beijing Normal University
+          Postdoctoral Researcher · College of Chemistry, Beijing Normal University
         </p>
+
+        <div class="chip-row">
+          <span class="chip">Quantum Tunneling</span>
+          <span class="chip">Water &amp; Interfaces</span>
+          <span class="chip">AI for Science · Agent Fleets</span>
+        </div>
 
         <p class="about-line">
-          I am a postdoctoral researcher at Beijing Normal University, dedicated to providing quantum perspectives on exciting problems at the intersection of physics, chemistry, and biology. My research focuses on quantum mechanical tunneling effects in hydrogen-bonded systems, proton transfer mechanisms, and machine learning applications in reaction kinetics.
+          I study how quantum tunneling reshapes hydrogen transfer in water, biomolecules, and microdroplets — with first-author work in <em>JACS</em>, <em>JPCL</em>, <em>JCP</em>, and <em>PCCP</em>. In parallel, I build AI agent infrastructure that makes computational chemistry reproducible and self-verifying: a fleet of autonomous research agents whose skills transfer only through verified reproduction.
         </p>
 
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-num">23</div><div class="stat-cap">SCI publications</div></div>
+          <div class="stat-box"><div class="stat-num">17</div><div class="stat-cap">JCR Q1</div></div>
+          <div class="stat-box"><div class="stat-num">6</div><div class="stat-cap">First-author (5 Q1)</div></div>
+          <div class="stat-box"><div class="stat-num">10</div><div class="stat-cap">AI research agents</div></div>
+        </div>
+
         <div class="links">
-          <a class="pill-link" href="mailto:yangxr2516@mails.jlu.edu.cn">✉ Email</a>
+          <a class="pill-link" href="mailto:yangxr@bnu.edu.cn">✉ Email</a>
           <a class="pill-link" href="https://github.com/yangxinrui811" target="_blank">GitHub</a>
           <a class="pill-link" href="https://orcid.org/0000-0002-9234-1309" target="_blank">ORCID</a>
           <a class="pill-link" href="https://www.researchgate.net/profile/Xinrui_Yang4" target="_blank">ResearchGate</a>
@@ -615,8 +665,40 @@
       </div>
     </section>
 
+    <section class="card" id="news">
+      <h2>News</h2>
+      <div class="news-item"><span class="news-date">2026.10</span><span>Co-first-author paper in <em>J. Am. Chem. Soc.</em>: accelerated self-photopolymerization of phenolics in microdroplets contributes to brown-carbon formation.</span></div>
+      <div class="news-item"><span class="news-date">2026.10</span><span>AI research fleet reaches 6 active agents across 3 workstations; 33 verified skills in the shared library. Methods note on verified capability transfer in preparation.</span></div>
+      <div class="news-item"><span class="news-date">2026.09</span><span>Preprint + open-source code: a machine-learning framework decoding the KIE–κ relationship for tunneling kinetics.</span></div>
+    </section>
+
     <section class="card" id="publications">
       <h2>Selected Publications</h2>
+      <p style="color:var(--muted);font-size:14px;margin:-6px 0 16px">
+        23 SCI publications · 17 in JCR Q1 journals · 6 first-author (5 in Q1).
+        First-author work published in <em>JACS</em>, <em>JPCL</em> (×2), <em>JCP</em>, and <em>PCCP</em>.
+      </p>
+
+      <div class="publication-card">
+        <div class="publication-cover-wrap">
+          <div class="cover-fallback">JACS</div>
+        </div>
+        <div>
+          <div class="item-title">
+            Accelerated Self-Photopolymerization of Phenolics in Microdroplets Contributes to the Brown Carbon Formation
+          </div>
+          <div class="authors">H. Yu, <span class="me">Xinrui Yang</span><sup>†</sup>, L. Chu, et al. <span style="color:var(--muted);font-size:0.9em">(† co-first author)</span></div>
+          <div class="highlight">
+            <span class="highlight-label">Highlight:</span>
+            Demonstrated that phenolic self-photopolymerization is dramatically accelerated in microdroplets, revealing a contributing pathway to atmospheric brown-carbon formation.
+          </div>
+          <div class="muted"><em>J. Am. Chem. Soc.</em> (2026)</div>
+          <span class="badge first">Co-First Author</span><span class="badge">JCR Q1</span>
+          <span class="tag">Microdroplets</span>
+          <span class="tag">Brown Carbon</span>
+          <span class="tag">Air–Water Interface</span>
+        </div>
+      </div>
 
       <div class="publication-card">
         <div class="publication-cover-wrap">
@@ -635,6 +717,7 @@
           <div class="mini-links">
             <a class="mini-link" href="https://doi.org/10.1021/acs.jpclett.5c02518" target="_blank">DOI</a>
           </div>
+          <span class="badge first">First Author</span><span class="badge">JCR Q1</span>
           <span class="tag">Quantum Tunneling</span>
           <span class="tag">Amino Acid</span>
           <span class="tag">Chirality</span>
@@ -658,6 +741,7 @@
           <div class="mini-links">
             <a class="mini-link" href="https://doi.org/10.1063/5.0207824" target="_blank">DOI</a>
           </div>
+          <span class="badge first">First Author</span><span class="badge">JCR Q1</span>
           <span class="tag">Proton Transfer</span>
           <span class="tag">Water Chains</span>
         </div>
@@ -680,6 +764,7 @@
           <div class="mini-links">
             <a class="mini-link" href="https://doi.org/10.1021/acs.jpclett.3c02817" target="_blank">DOI</a>
           </div>
+          <span class="badge first">First Author</span><span class="badge">JCR Q1</span>
           <span class="tag">Quantum Tunneling</span>
           <span class="tag">Thalidomide</span>
           <span class="tag">Water Bridges</span>
@@ -703,6 +788,7 @@
           <div class="mini-links">
             <a class="mini-link" href="https://doi.org/10.1039/D3CP02873F" target="_blank">DOI</a>
           </div>
+          <span class="badge first">First Author</span><span class="badge">JCR Q1</span>
           <span class="tag">Water Trimer</span>
           <span class="tag">H-Bond Rotation</span>
           <span class="tag">Proton Transfer</span>
@@ -822,6 +908,90 @@
           </div>
         </div>
       </details>
+
+      <details style="margin-top:14px">
+        <summary><strong>In Preparation &amp; Preprints</strong></summary>
+        <div class="publication-list" style="margin-top:12px">
+          <div style="margin-bottom:10px">
+            <span class="item-title" style="font-size:15px">Tunneling Maps: How External Electric Fields Reshape the Barrier Topology of Hydrogen Transfer</span><br>
+            <span class="authors"><strong>Xinrui Yang</strong> et al.</span><br>
+            <span class="muted">First author · in final preparation (2026)</span>
+          </div>
+          <div style="margin-bottom:10px">
+            <span class="item-title" style="font-size:15px">Machine Learning Decodes the Kinetic Isotope Effect–Tunneling Factor Relationship</span><br>
+            <span class="authors"><strong>Xinrui Yang</strong> et al.</span><br>
+            <span class="muted">First author · preprint, code open-sourced ·
+              <a href="https://github.com/yangxinrui811/ml-kinetic-isotope" target="_blank">GitHub</a></span>
+          </div>
+          <div style="margin-bottom:10px">
+            <span class="item-title" style="font-size:15px">Verified Capability Transfer between Research Agents via Replayable Reproduction Packages</span><br>
+            <span class="authors"><strong>Xinrui Yang</strong></span><br>
+            <span class="muted">Methods note on AI-for-Science infrastructure · in preparation (2026)</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="projects">
+      <h2>AutoResearch · AI Agent Infrastructure</h2>
+
+      <p class="about-line" style="margin-bottom:6px">
+        Beyond using AI as a tool, I build AI systems that <strong>do research under verification</strong>.
+        I operate a fleet of autonomous research agents across multiple workstations, coordinated through a shared
+        blackboard protocol. Skills flow between agents only after reproducibility checks; a new agent must reproduce a
+        published analysis within stated numerical tolerances before it is admitted to production work. The fleet has
+        caught and repaired its own infrastructure defects — each captured as a quantified validation rule, turning
+        operational failures into permanent institutional memory.
+      </p>
+
+      <div class="fleet-flow">
+        <div class="fleet-node"><b>Agents work</b>10 autonomous agents, role-separated</div>
+        <span class="fleet-arrow">→</span>
+        <div class="fleet-node"><b>Skills submitted</b>procedures + run records</div>
+        <span class="fleet-arrow">→</span>
+        <div class="fleet-node"><b>Editor review</b>dedup, merge, version</div>
+        <span class="fleet-arrow">→</span>
+        <div class="fleet-node"><b>Verified transfer</b>install after reproduction</div>
+        <span class="fleet-arrow">↺</span>
+        <div class="fleet-node"><b>Self-correction</b>failures → validation rules</div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-num">10</div><div class="stat-cap">agents · 5 workstations</div></div>
+        <div class="stat-box"><div class="stat-num">33</div><div class="stat-cap">verified skills in fleet library</div></div>
+        <div class="stat-box"><div class="stat-num">117</div><div class="stat-cap">submissions peer-reviewed</div></div>
+        <div class="stat-box"><div class="stat-num">±tol</div><div class="stat-cap">reproduction-based admission</div></div>
+      </div>
+
+      <p style="color:var(--muted);font-size:13.5px;margin-top:14px">
+        The same infrastructure drives my own science: automated transition-state search and tunneling kinetics
+        (AutoTunnel), machine-learning prediction of kinetic isotope effects, and machine-learning potentials coupled
+        with path-integral molecular dynamics (DeePMD-kit / DP-GEN active learning).
+      </p>
+
+      <h2 style="margin-top:26px">Software</h2>
+      <div class="soft-grid">
+        <div class="soft-card">
+          <b>AutoTunnel</b>
+          <p>Automated transition-state search and tunneling kinetics: barrier width &amp; asymmetry extraction, tunneling-corrected rate constants. Supports 10+ group publications.</p>
+          <a href="https://github.com/yangxinrui811/AutoTunnel-skill" target="_blank">GitHub →</a>
+        </div>
+        <div class="soft-card">
+          <b>ml-kinetic-isotope</b>
+          <p>Machine-learning framework decoding the KIE–κ relationship across reaction families; companion code to the preprint.</p>
+          <a href="https://github.com/yangxinrui811/ml-kinetic-isotope" target="_blank">GitHub →</a>
+        </div>
+        <div class="soft-card">
+          <b>interfacial-pmf</b>
+          <p>Automated PMF calculations for solutes at liquid interfaces — free-energy profiles with minimal manual intervention.</p>
+          <a href="https://github.com/yangxinrui811/interfacial-pmf-skill" target="_blank">GitHub →</a>
+        </div>
+        <div class="soft-card">
+          <b>paper-obsidian-review</b>
+          <p>Literature-review agent skill: structured bilingual notes, multi-project management, citation-network completion.</p>
+          <a href="https://github.com/yangxinrui811/paper-obsidian-review" target="_blank">GitHub →</a>
+        </div>
+      </div>
     </section>
 
     <section class="card" id="experience">
@@ -875,8 +1045,9 @@
     </section>
 
     <section class="card" id="notes">
-      <h2>Posts & Notes</h2>
-      <p class="section-note" style="color:var(--muted)">Coming soon.</p>
+      <h2>Posts &amp; Notes</h2>
+      <div class="news-item"><span class="news-date">2026</span><span>An essay on running an AI research fleet — constitutions, reproduction exams, and why verification is the bottleneck of AI for Science — is in preparation (Chinese &amp; English).</span></div>
+      <div class="news-item"><span class="news-date">2027</span><span>Centennial perspective planned: quantum tunneling in chiral molecules from Hund (1927) to date.</span></div>
     </section>
   </main>
 
