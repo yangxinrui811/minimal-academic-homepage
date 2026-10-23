@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agents for Science · AutoResearch | Xinrui Yang</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <main class="container">
+    <nav class="top-nav">
+      <div class="nav-name"><a href="index.html" style="color:inherit;text-decoration:none">Xinrui Yang</a></div>
+      <div class="nav-links">
+        <a href="research.html">Research</a>
+        <a href="agents.html" class="active">AI Agents</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#experience">Experience</a>
+      </div>
+    </nav>
+
+    <section class="card hero">
+      <div>
+        <div class="kicker">AI Agents for Science · AutoResearch</div>
+        <h1 style="margin:0 0 10px">A Fleet of AI Agents That Do Science, Verifiably</h1>
+        <p class="page-lede">
+          Language models can generate scientific-looking results at negligible cost; science needs results that
+          survive verification. So I stopped treating AI as a writing assistant and built a research organization
+          of autonomous agents — one in which capability is <strong>earned through independent reproduction,
+          not asserted</strong>.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Multi-Agent Research Fleet</span>
+          <span class="chip">Verified Capability Transfer</span>
+          <span class="chip">Self-Correcting Infrastructure</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="stat-row" style="margin-top:4px">
+        <div class="stat-box"><div class="stat-num">10</div><div class="stat-cap">autonomous agents</div></div>
+        <div class="stat-box"><div class="stat-num">5</div><div class="stat-cap">workstations</div></div>
+        <div class="stat-box"><div class="stat-num">33</div><div class="stat-cap">verified skills in the shared library</div></div>
+        <div class="stat-box"><div class="stat-num">117</div><div class="stat-cap">skill submissions peer-reviewed</div></div>
+        <div class="stat-box"><div class="stat-num">±tol</div><div class="stat-cap">reproduction gate for admission</div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>The Problem: Generation Is Cheap, Verification Is Not</h2>
+      <p class="about-line">
+        AI-for-Science today is bottlenecked not by intelligence but by trust. A single agent can draft a
+        manuscript, fit a curve, or run a pipeline — but no principal investigator can re-check every number it
+        produces. My answer is institutional, not algorithmic: an organization in which every claim an agent
+        makes about its own skill must be backed by a replayable analysis, reproduced independently, within
+        explicitly stated numerical tolerances.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The Fleet</h2>
+      <p class="about-line" style="margin-bottom:14px">
+        Ten agents run on five workstations, each with a distinct research mandate. They coordinate through
+        three shared, versioned services — no private channels, everything auditable in git.
+      </p>
+
+      <div class="arch-band">
+        <div class="arch-title">Agents · 10 on 5 workstations</div>
+        <div class="agent-chip-row">
+          <span class="agent-chip editor">Editor-in-Chief</span>
+          <span class="agent-chip">Agent · tunneling theory</span>
+          <span class="agent-chip">Agent · simulation pipelines</span>
+          <span class="agent-chip">Agent · manuscript production</span>
+          <span class="agent-chip">Agent · literature intelligence</span>
+          <span class="agent-chip">Agent · interface chemistry</span>
+          <span class="agent-chip">…</span>
+        </div>
+      </div>
+
+      <div class="arch-band">
+        <div class="arch-title">Shared Blackboard · coordination</div>
+        <div class="arch-cols">
+          <div class="arch-cell"><b>Task board</b>editor-issued instructions, priorities, handover &amp; wake-up cards</div>
+          <div class="arch-cell"><b>Status ledger</b>every agent self-reports progress, blockers, decisions</div>
+        </div>
+      </div>
+
+      <div class="arch-band">
+        <div class="arch-title">Knowledge Base · institutional memory</div>
+        <div class="arch-cols">
+          <div class="arch-cell"><b>Reproduction packages</b>inputs + scripts + anchors + tolerances</div>
+          <div class="arch-cell"><b>Validation rules</b>every pitfall stored with quantitative evidence</div>
+          <div class="arch-cell"><b>Skill library</b>procedures with run records &amp; versioned upgrades</div>
+        </div>
+      </div>
+
+      <div class="arch-band" style="background:#e8f2ff">
+        <div class="arch-title" style="color:#0a5bb5">Verification Gate · admission</div>
+        <div style="font-size:13.5px;color:var(--subtle)">
+          A new agent starts work only after reproducing an existing analysis with outputs inside the
+          package's stated tolerances. Skills move between agents under the same rule.
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>How a Skill Travels</h2>
+      <p class="about-line">The core loop of the fleet — capability becomes a versioned, transferable asset:</p>
+      <div class="step-grid">
+        <div class="step-card"><div class="step-num">1</div><b>Work</b><p>An agent executes a research task on its own mandate — simulation, analysis, or writing.</p></div>
+        <div class="step-card"><div class="step-num">2</div><b>Submit</b><p>Procedures crystallize into skills, submitted with run records: dates, projects, outcomes.</p></div>
+        <div class="step-card"><div class="step-num">3</div><b>Review</b><p>The editor-agent deduplicates, merges variants, keeps every contributor's hard-won pitfalls, and versions the result.</p></div>
+        <div class="step-card"><div class="step-num">4</div><b>Install</b><p>Any agent fleet-wide can install the skill — and improvements flow back as versioned upgrades.</p></div>
+      </div>
+      <div class="loop-back">
+        ↺ &nbsp;When the fleet fails, the failure itself is captured as a quantified validation rule — the system
+        writes its own debugging manual. Agents have already caught and patched infrastructure defects this way.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Design Principles</h2>
+      <div class="principle-grid">
+        <div class="principle-card"><b>Verification over generation</b><p>The admission currency is a number reproduced independently, within tolerance — never a confident paragraph.</p></div>
+        <div class="principle-card"><b>Institutions, not prompts</b><p>Editorial review, handover protocols, attribution rules: organizational design is what makes ten agents more than ten chatbots.</p></div>
+        <div class="principle-card"><b>Numbers or it didn't happen</b><p>Every rule in the knowledge base carries quantitative evidence — an error signature, a threshold, a measured rate.</p></div>
+        <div class="principle-card"><b>Human sovereignty</b><p>The fleet proposes; the principal investigator disposes. One human reviews decisions, not derivations.</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What It Runs</h2>
+      <p class="about-line">
+        The fleet is not a demo — it produces the science described on the
+        <a href="research.html">research page</a>: automated transition-state search and tunneling kinetics with
+        <strong>AutoTunnel</strong>, machine-learning prediction of kinetic isotope effects, machine-learning
+        potentials with path-integral molecular dynamics, and large-scale literature intelligence.
+      </p>
+      <p style="color:var(--muted);font-size:13.5px;margin-top:12px">
+        The coordination protocol layer is being prepared for open-source release.
+      </p>
+      <a class="btn" href="https://github.com/yangxinrui811" target="_blank">Follow on GitHub →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 Xinrui Yang. Built with GitHub Pages.
+  </footer>
+</body>
+</html>

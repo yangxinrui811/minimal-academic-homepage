@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | Xinrui Yang</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <main class="container">
+    <nav class="top-nav">
+      <div class="nav-name"><a href="index.html" style="color:inherit;text-decoration:none">Xinrui Yang</a></div>
+      <div class="nav-links">
+        <a href="research.html" class="active">Research</a>
+        <a href="agents.html">AI Agents</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#experience">Experience</a>
+      </div>
+    </nav>
+
+    <section class="card hero">
+      <div>
+        <div class="kicker">Research</div>
+        <h1 style="margin:0 0 10px">Quantum Mechanics in Water, One Hydrogen at a Time</h1>
+        <p class="page-lede">
+          Chemical intuition treats hydrogen as a classical particle. It is not. I study how quantum
+          tunneling reshapes hydrogen transfer in aqueous and interfacial chemistry — from the racemization of
+          amino acids and drug molecules to proton exchange along water networks — and I build the automated
+          tools that make these computations routine and reproducible.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Proton &amp; H-Atom Tunneling</span>
+          <span class="chip">Water Networks &amp; Interfaces</span>
+          <span class="chip">Chirality &amp; Racemization</span>
+          <span class="chip">Automated Kinetics</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card theme-card">
+      <h2>① Hydrogen-Transfer Tunneling in Water &amp; Biomolecules</h2>
+      <p class="about-line">
+        Tunneling entered chemistry through a chiral molecule: Hund's 1927 analysis of amino-acid racemization
+        concluded that tunneling is negligible, and the subject slept for nearly a century. My first-author series
+        revisits that verdict with modern electronic-structure and kinetics methods, and finds that water —
+        through its hydrogen-bond network — flips the answer.
+      </p>
+      <ul style="font-size:14.5px;line-height:1.8;color:var(--subtle)">
+        <li><strong>Amino acid racemization.</strong> Quantum tunneling governs a dual-pathway mechanism via
+          water bridges, reconciling pH-dependent experiments
+          <span class="pub-inline">— <a href="https://doi.org/10.1021/acs.jpclett.5c02518" target="_blank">JPCL 2025</a></span></li>
+        <li><strong>Thalidomide.</strong> Water-bridged proton tunneling accelerates racemization 87–149-fold at
+          body temperature, bringing theory into agreement with experiment
+          <span class="pub-inline">— <a href="https://doi.org/10.1021/acs.jpclett.3c02817" target="_blank">JPCL 2023</a></span></li>
+        <li><strong>Water chains.</strong> Two co-existing, opposing proton-transfer mechanisms revealed by
+          position along a finite one-dimensional chain
+          <span class="pub-inline">— <a href="https://doi.org/10.1063/5.0207824" target="_blank">JCP 2024</a></span></li>
+        <li><strong>Water clusters.</strong> A sequential-flipping mechanism for donor–acceptor exchange in the
+          water trimer <span class="pub-inline">— <a href="https://doi.org/10.1039/D3CP02873F" target="_blank">PCCP 2023</a></span>;
+          quantum resonance tunneling in confined water
+          <span class="pub-inline">— <a href="https://doi.org/10.3389/fphy.2022.1026384" target="_blank">Front. Phys. 2022</a></span></li>
+      </ul>
+    </section>
+
+    <section class="card theme-card">
+      <h2>② Microdroplets &amp; the Air–Water Interface</h2>
+      <p class="about-line">
+        Micron-sized droplets accelerate reactions by orders of magnitude and sit at the heart of atmospheric
+        aerosol chemistry. As co-first author, I quantified how phenolic compounds self-photopolymerize far
+        faster at the droplet surface than in bulk — a previously hidden pathway feeding atmospheric brown
+        carbon, the sunlight-absorbing component of organic aerosols.
+      </p>
+      <p class="pub-inline" style="font-size:14px">
+        <a href="https://doi.org/10.1021/jacs.6c10186" target="_blank"><em>J. Am. Chem. Soc.</em> 148, 31487–31497 (2026)</a>
+        — co-first author
+      </p>
+      <p style="color:var(--muted);font-size:13.5px;margin-top:10px">
+        Current directions: reaction kinetics at electrified air–water interfaces, and how interfacial electric
+        fields reshape the barriers of hydrogen-transfer reactions.
+      </p>
+    </section>
+
+    <section class="card theme-card">
+      <h2>③ Methods &amp; Automation</h2>
+      <p class="about-line">
+        The science above runs on tools I build. <strong>AutoTunnel</strong> automates the full tunneling-kinetics
+        pipeline — transition-state search, reaction-path reconstruction, barrier-width and asymmetry extraction,
+        tunneling-corrected rate constants — and has supported more than ten publications from our group.
+        A machine-learning framework decodes the kinetic isotope effect–tunneling relationship across reaction
+        families (preprint, open source). For nuclear quantum effects in condensed phases, I couple
+        machine-learning potentials (DeePMD-kit, DP-GEN active learning) with path-integral molecular dynamics.
+      </p>
+      <a class="btn" href="https://github.com/yangxinrui811?tab=repositories" target="_blank">Code on GitHub →</a>
+      <a class="btn" href="agents.html" style="margin-left:8px">How AI agents run it →</a>
+    </section>
+
+    <section class="card">
+      <h2>Full Publication List</h2>
+      <p style="color:var(--muted);font-size:14px">
+        23 SCI publications · 17 in JCR Q1 journals · 6 first-author (5 in Q1).
+        <a href="index.html#publications">See annotated list on the main page →</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 Xinrui Yang. Built with GitHub Pages.
+  </footer>
+</body>
+</html>
