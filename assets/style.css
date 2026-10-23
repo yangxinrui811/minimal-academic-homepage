@@ -635,6 +635,14 @@
     .principle-card { border:1px solid var(--line); border-radius:16px; padding:16px; background:rgba(255,255,255,.7); }
     .principle-card b { display:block; font-size:14.5px; margin-bottom:5px; }
     .principle-card p { margin:0; font-size:13px; color:var(--muted); line-height:1.55; }
+    .domain-card { border:1px solid var(--line); border-radius:16px; padding:18px 18px 14px; background:rgba(255,255,255,.7); transition:transform .22s ease, box-shadow .22s ease; }
+    .domain-card:hover { transform:translateY(-3px); box-shadow:var(--shadow); }
+    .domain-card h3 { display:flex; align-items:center; gap:9px; font-size:15px; margin-bottom:2px; }
+    .domain-card .dom-scope { margin:2px 0 4px; font-size:12.5px; color:var(--muted); }
+    .domain-card ul { margin:6px 0 2px; padding-left:18px; }
+    .domain-card li { font-size:13px; color:var(--subtle); line-height:1.58; margin:7px 0; }
+    .domain-card li b { color:var(--text); }
+    .portfolio-note { margin-top:14px; font-size:13px; color:var(--muted); background:var(--chip); border-radius:12px; padding:10px 14px; }
     .loop-back {
       margin-top:10px; text-align:center; font-size:13px; color:var(--muted);
       background:var(--chip); border-radius:12px; padding:9px 12px;
