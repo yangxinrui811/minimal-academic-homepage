@@ -676,3 +676,47 @@
     }
     .mini-pipe .pa { color:#0a5bb5; font-weight:700; }
     @media (max-width:720px){ .fig-row,.fig-row.rev{grid-template-columns:1fr;} }
+
+    /* ===== v5 polish: progress bar, reveal, domain accents, print ===== */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; height: 2.5px; width: 0; z-index: 99;
+      background: linear-gradient(90deg, var(--link), #8b5cf6);
+      border-radius: 0 2px 2px 0; pointer-events: none;
+    }
+    .reveal:not(.in) { opacity: 0; }
+    .reveal.in { animation: rise .55s cubic-bezier(.2,.7,.3,1) both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal:not(.in) { opacity: 1; }
+      .reveal.in { animation: none; }
+    }
+
+    /* domain accent system (portfolio cards) */
+    .domain-card { border-top: 3px solid var(--dom, var(--link)); }
+    .domain-card h3 { color: var(--dom, var(--text)); }
+    .domain-card h3 .icon {
+      width: 34px; height: 34px; padding: 7px; margin-right: 0; flex: none;
+      border-radius: 10px; box-sizing: border-box; vertical-align: middle;
+      background: var(--dom-t, var(--chip));
+      color: var(--dom, var(--link));
+    }
+    .dom-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 2px; }
+    .dom-tags span {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px; letter-spacing: .01em; padding: 3px 10px; border-radius: 99px;
+      color: var(--dom, var(--link));
+      background: var(--dom-t, var(--chip));
+      border: 1px solid color-mix(in srgb, var(--dom, var(--link)) 25%, transparent);
+    }
+
+    .grad {
+      background: linear-gradient(92deg, var(--link) 20%, #8b5cf6 85%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+
+    @media print {
+      .top-nav, .footer, .banner, .progress-bar, .btn { display: none !important; }
+      body { background: #fff; }
+      .card { box-shadow: none !important; border: 1px solid #ddd !important; page-break-inside: avoid; }
+    }

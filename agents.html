@@ -27,7 +27,7 @@
     <section class="card hero">
       <div>
         <div class="kicker">AI Agents for Science · AutoResearch</div>
-        <h1 style="margin:0 0 10px">A Fleet of AI Agents That Do Science, Verifiably</h1>
+        <h1 style="margin:0 0 10px">A Fleet of AI Agents That Do Science, <span class="grad">Verifiably</span></h1>
         <p class="page-lede">
           Language models can generate scientific-looking results at negligible cost; science needs results that
           survive verification. So I stopped treating AI as a writing assistant and built a research organization
@@ -135,12 +135,15 @@
         Mechanisms are the how — this is the what. Completed campaigns across computational
         chemistry, each one mandated by a human, executed end-to-end by agents, and closed with a
         verifiable artifact: an audit script, a replay package, or a regression suite.
+        The published parts of the science itself live on the
+        <a href="research.html">research page</a>.
       </p>
       <div class="principle-grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
 
-        <div class="domain-card">
+        <div class="domain-card" style="--dom:#0a84ff;--dom-t:rgba(10,132,255,.10)">
           <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12 C5 7, 8 7, 11 12 S 17 17, 20 12 M20 12 L17.5 9.5 M20 12 L17.5 14.5"/></svg>Molecular Dynamics &amp; Enhanced Sampling</h3>
           <p class="dom-scope">GROMACS + PLUMED campaigns, from cluster submission to judgment figures</p>
+          <div class="dom-tags"><span>90 trajectories</span><span>26 + 51 audit checks</span><span>1st replay package</span></div>
           <ul>
             <li><b>Nanoscale-confinement campaign, 90 trajectories.</b> An agent executed the full analysis of a 90-run campaign across a systematic parameter grid — unified time-window alignment, region masking, stratified block statistics — distilled into a five-panel main figure. Two internal audits (26/26 and 51/51 checks) passed before the result was sealed as the fleet's first replay package.</li>
             <li><b>Enhanced sampling on public benchmarks.</b> Multi-arm well-tempered metadynamics with convergence races on standard test systems (alanine peptides, chignolin), umbrella-window free energies, and sampling loops redirected by convergence diagnostics — jobs submitted and monitored on the university cluster under strict queue discipline.</li>
@@ -148,29 +151,32 @@
           </ul>
         </div>
 
-        <div class="domain-card">
+        <div class="domain-card" style="--dom:#8b5cf6;--dom-t:rgba(139,92,246,.10)">
           <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><ellipse cx="12" cy="12" rx="9" ry="3.8"/><ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(120 12 12)"/></svg>Quantum Chemistry &amp; Reaction Kinetics</h3>
           <p class="dom-scope">Electronic-structure and rate-theory pipelines that run unattended</p>
+          <div class="dom-tags"><span>TS → barrier → k(T)</span><span>unattended batches</span><span>90-min watchdog</span><span>anti-bootstrap fence</span></div>
           <ul>
-            <li><b>End-to-end kinetics automation.</b> Transition-state search → barrier geometry → tunneling correction → temperature-dependent rate constants, chained across reaction families without per-reaction human touch.</li>
+            <li><b>End-to-end kinetics automation (<strong>AutoTunnel</strong>).</b> Transition-state search → barrier geometry → tunneling correction → temperature-dependent rate constants, chained across reaction families without per-reaction human touch.</li>
             <li><b>Parameter-swept barrier campaigns.</b> At each value of an external control parameter the complete stationary-point network is re-optimized and re-characterized; batches run unattended, with a self-checking watchdog on a 90-minute cadence that reports completion and triages failures.</li>
             <li><b>ML potentials with an anti-bootstrap fence.</b> Ab-initio MD → training → path-integral exploration → outlier screening → first-principles re-labeling. Model predictions are never fed back as training labels — the classic self-training trap is fenced off by explicit rule.</li>
             <li><b>ML prediction of kinetic isotope effects</b>, from fitting through uncertainty reporting.</li>
           </ul>
         </div>
 
-        <div class="domain-card">
+        <div class="domain-card" style="--dom:#0fb5c9;--dom-t:rgba(15,181,201,.11)">
           <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 L4 5 M4 19 L20 19 M7 15 L10 9 L13 13 L17 6"/></svg>Methodology &amp; Theory</h3>
           <p class="dom-scope">Long-running theory programs, versioned like software</p>
+          <div class="dom-tags"><span>11 iterations</span><span>18/18 regression tests</span><span>negative results kept</span></div>
           <ul>
             <li><b>An 11-iteration theory program</b> on whether enhanced-sampling coordinates miss slow modes — mathematical foundations, sampling protocols, and a regression-tested diagnostics package (CV&nbsp;Check, 18/18) grown from the same line of work.</li>
             <li><b>Negative results are archived, not buried.</b> A four-arm benchmark campaign was closed by the principal investigator's verdict after adjudication against ground truth; a six-arm study that disproved the fleet's own efficiency hypothesis lives on as curated documentation. The fleet remembers its failures on purpose.</li>
           </ul>
         </div>
 
-        <div class="domain-card">
+        <div class="domain-card" style="--dom:#ff9500;--dom-t:rgba(255,149,0,.11)">
           <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4 V9 M4 9 H20 M15 4 V9 M9 20 V15 M15 20 V15 M4 15 H9 M15 15 H20"/></svg>Machine Learning × Sampling</h3>
           <p class="dom-scope">Where learned models meet enhanced sampling — with audits between</p>
+          <div class="dom-tags"><span>ML proposes</span><span>audit disposes</span><span>adaptive windows</span></div>
           <ul>
             <li><b>Learned slow coordinates, audited.</b> Machine-learned dictionaries of slow modes propose new collective variables; formal audits decide whether they are admitted. The ML proposes, the audit disposes.</li>
             <li><b>Diagnostics in the training objective.</b> Convergence and coverage diagnostics made differentiable and embedded directly in the objective of learned collective variables.</li>
@@ -178,9 +184,10 @@
           </ul>
         </div>
 
-        <div class="domain-card">
+        <div class="domain-card" style="--dom:#34c759;--dom-t:rgba(52,199,89,.12)">
           <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20 H4 C4 16 7 14.5 10 14.5 C10 11 10.5 6 12 4 C13.5 6 14 11 14 14.5 C17 14.5 20 16 20 20 H16"/></svg>Research Operations</h3>
           <p class="dom-scope">The scientific process around the science — also agent-run</p>
+          <div class="dom-tags"><span>254 + 197 papers</span><span>13 deep-read rounds</span><span>8 revision rounds</span></div>
           <ul>
             <li><b>Literature intelligence at scale.</b> A curated base of 254 abstracts and 197 full texts; 13 rounds of quantitative deep reading that extracts barriers, tunneling factors, and rate constants from full texts rather than abstracts.</li>
             <li><b>Manuscript engineering.</b> A physics manuscript taken through eight structured revision rounds — 11 → 9 pages, 60 references restyled to a single rigorous journal format, four figures normalized, and three silent layout defects caught and fixed.</li>
@@ -221,18 +228,9 @@
         Behind them: 33 skills promoted to the verified shared library out of 117 submissions reviewed —
         every merge keeps its contributor's hard-won pitfalls.
       </p>
-    </section>
-
-    <section class="card">
-      <h2>What It Runs</h2>
-      <p class="about-line">
-        The fleet is not a demo — it produces the science described on the
-        <a href="research.html">research page</a>: automated transition-state search and tunneling kinetics with
-        <strong>AutoTunnel</strong>, machine-learning prediction of kinetic isotope effects, machine-learning
-        potentials with path-integral molecular dynamics, and large-scale literature intelligence.
-      </p>
       <p style="color:var(--muted);font-size:13.5px;margin-top:12px">
-        The coordination protocol layer is being prepared for open-source release.
+        The coordination protocol layer — blackboard, constitution, and review pipeline — is being
+        prepared for open-source release.
       </p>
       <a class="btn" href="https://github.com/yangxinrui811" target="_blank">Follow on GitHub →</a>
     </section>
@@ -241,5 +239,6 @@
   <footer class="footer">
     © 2026 Xinrui Yang. Built with GitHub Pages.
   </footer>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>
